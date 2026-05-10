@@ -1,0 +1,2 @@
+# LiveSync_GStream
+GStreamを使用したライブ用マルチストリームmp4再生用pythonスクリプト
