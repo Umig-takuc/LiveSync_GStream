@@ -1,2 +1,4 @@
 # LiveSync_GStream
 GStreamを使用したライブ用マルチストリームmp4再生用pythonスクリプト
+Mac版であるがWindows版もあとで作成する予定
+LiveSync_OBSのようなWebサーバーを用いた管理機能も実装したい
