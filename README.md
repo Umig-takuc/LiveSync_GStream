@@ -4,6 +4,7 @@ Mac版であるがWindows版もあとで作成する予定。
 LiveSync_OBSのようなWebサーバーを用いた管理機能も実装したい
 
 ## (Usage)
+- 事前に必要な動画ストリームを **ffmpeg** を用いてmulti-stream mp4ファイルにしておくこと。詳細は追記予定。
 - `gst-device-monitor-1.0 Audio/Sink` コマンドにより音声デバイスのUniqueIDをconfigファイルに記述すること
 - 現時点でmp4/HEVC 2v2aストリームを想定
 
