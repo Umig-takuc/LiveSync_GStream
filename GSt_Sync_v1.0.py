@@ -75,8 +75,8 @@ except ImportError:
 pipeline_str = f"""
     filesrc location="{FILE_PATH}" ! qtdemux name=demux
     
-    demux.video_0 ! queue ! h265parse ! vtdec ! videoconvert ! videoscale ! video/x-raw,pixel-aspect-ratio=1/1 ! videoconvert ! osxvideosink force-aspect-ratio=true
-    demux.video_1 ! queue ! h265parse ! vtdec ! videoconvert ! videoscale ! video/x-raw,pixel-aspect-ratio=1/1 ! videoconvert ! osxvideosink force-aspect-ratio=true
+    demux.video_0 ! queue ! decodebin ! videoconvert ! videoscale ! video/x-raw,pixel-aspect-ratio=1/1 ! videoconvert ! osxvideosink force-aspect-ratio=true sync=true
+    demux.video_1 ! queue ! decodebin ! videoconvert ! videoscale ! video/x-raw,pixel-aspect-ratio=1/1 ! videoconvert ! osxvideosink force-aspect-ratio=true sync=true
     
     demux.audio_0 ! queue ! decodebin ! audioconvert ! audioresample ! audiorate ! osxaudiosink unique-id="{UID_1}" sync=true
     demux.audio_1 ! queue ! decodebin ! audioconvert ! audioresample ! audiorate ! osxaudiosink unique-id="{UID_2}" sync=true
